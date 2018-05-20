@@ -7,7 +7,7 @@ services:
       SHOW_URLS: 'true'
       
       LUGARES_URL: 'lugares_ms'
-      LUGARES_PORT: '4005'
+      LUGARES_PORT: '4003'
       LUGARES_ENTRY: 'lugares'
 
 
@@ -16,15 +16,15 @@ services:
       USUARIOS_ENTRY: 'users'
 
       CITAS_URL: 'citas-ms'
-      CITAS_PORT: '4002'
+      CITAS_PORT: '4005'
       CITAS_ENTRY: 'citas'
 
-      GUSTOS_URL: 'gustos_ms'
-      GUSTOS_PORT: '4006'
+      GUSTOS_URL: 'gustos-ms'
+      GUSTOS_PORT: '4002'
       GUSTOS_ENTRY: ''
 
-      EMPAREJADOR_URL: 'emparejadores-ms'
-      EMPAREJADOR_PORT: '4004'
-      EMPAREJADOR_ENTRY: 'emparejadores/'
+      EMPAREJAMIENTO_URL: 'emparejamiento-ms'
+      EMPAREJAMIENTO_PORT: '4004'
+      EMPAREJAMIENTO_ENTRY: 'emparejamiento'
     ports:
       - '5000:5000'
