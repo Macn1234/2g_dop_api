@@ -14,6 +14,17 @@ input MatchInput {
     state_user_one: Int!
 }
 
+type UserAccepted{
+  id: Int!
+  id_user: Int!
+  id_user_accepted: Int!
+}
+
+type UserRejected{
+  id: Int!
+  id_user: Int!
+  id_user_rejected: Int!
+}
 
 
 type PleasureMatch {
@@ -36,9 +47,12 @@ type ListPossibleFiltered {
 export const matchQueries = `
     allMatch: [Match]!
     matchById(id: Int!): Match!
+    acceptedByUser(id:Int!):[UserAccepted]!
+    rejectedByUser(id:Int!):[UserRejected]!
 `;
 
 export const matchMutations = `
     createMatch(match: MatchInput!): Match!
+    deleteMatch(id:Int!):Match
     filtrateListPossibles(id: Int! , listUsers:ListPossibleMatchInput!):ListPossibleFiltered!
 `;

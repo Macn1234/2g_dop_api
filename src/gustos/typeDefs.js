@@ -56,6 +56,7 @@ export const gustosQueries = `
     pleasureByUser(user_id: Int!): [Pleasure]
     pleasuresByCategory(category_id: Int!): [Pleasure]
     pleasuresByName(name: String!): [Pleasure]
+    usersByUser(user_id: Int!): [Pleasure]
 `;
 
 export const gustosMutations = `
