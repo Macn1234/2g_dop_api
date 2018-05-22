@@ -32,7 +32,7 @@ const resolvers = {
 	    pleasuresByName: (_, { name }) =>
 		generalRequest(`${URL}pleasures?by_name=${name}`, 'GET'),
 	    usersByUser: (_,{ user_id }) =>
-		generalRequest(`${URL}users?by_user=${user_id}`, 'GET'),
+		generalRequest(`${URL}users?user_id=${user_id}`, 'GET'),
 	},
     Mutation: {
 	createCategory: (_, { category }) =>
