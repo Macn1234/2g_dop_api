@@ -47,6 +47,7 @@ type ListPossibleFiltered {
 export const matchQueries = `
     allMatch: [Match]!
     matchById(id: Int!): Match!
+    matchByUser(id: Int!): [Match]!
     acceptedByUser(id:Int!):[UserAccepted]!
     rejectedByUser(id:Int!):[UserRejected]!
 `;

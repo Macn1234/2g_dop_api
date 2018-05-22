@@ -9,6 +9,8 @@ const resolvers = {
 			getRequest(URL, ''),
 		matchById: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'GET'),
+		matchByUser: (_, { id }) =>
+			generalRequest(`${URL}/usuario/${id}`, 'GET'),
 		acceptedByUser: (_, { id }) =>
 			generalRequest(`${URL}/aceptados/usuario/${id}`, 'GET'),
 		rejectedByUser: (_, { id }) =>
