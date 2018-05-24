@@ -7,10 +7,15 @@ type User {
     picture: String!
     age: String!
     oauth_token: String!
-
 }
-
-
+type UpUser {
+    id: Int!
+    name: String
+    email: String
+    gender: String
+    picture: String
+    age: String
+}
 input UserInput {
     name: String!
     email: String!
@@ -19,11 +24,16 @@ input UserInput {
     age: String!
     password: String!
 }
-
+input UserInputs {
+    name: String!
+    email: String!
+    gender: String!
+    picture: String!
+    age: String!
+}
 type valid{
     valid: Boolean!
 }
-
 `;
 
 export const usuariosQueries = `
@@ -32,11 +42,8 @@ export const usuariosQueries = `
     validation(idsession:Int!,token:String!): valid!
 `;
 
-export const usuariosMutations = `    
+export const usuariosMutations = `
     createUser(user: UserInput!): User!
     deleteUser(id: Int!): User!
-    updateUser(id: Int!, user: UserInput!): User! 
-
+    updateUser(id: Int!, user: UserInputs!): UpUser!
 `;
-
-//createToken(auth: autInput!): token!
