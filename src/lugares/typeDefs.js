@@ -17,10 +17,17 @@ type Point
     coordinates: [Float]!
     index: String!
 }
+
+input PointInput
+{
+    type: String!
+    coordinates: [Float]!
+    index: String!
+}
 input LugarInput {
     nombre: String!
     nivelPrecio: String!
-    ubicacion: Point!
+    ubicacion: PointInput!
     direccion: String
     horario: String
     calificacion: String
@@ -38,7 +45,7 @@ export const lugaresQueries = `
 
 
 export const lugaresMutations = `
-    createLugar(lugar: LugarInput): Lugar!
+    createLugar(lugar: LugarInput!): Lugar!
     deleteLugar(id: Int!): Lugar!
     updateLugar(id: Int!): Lugar!
 `;
